@@ -44,6 +44,8 @@ const errorDisplay = document.getElementById("errorDisplay");
 add.addEventListener(e){
     innerHtml.e.('error message')
 }
+
+
 // const errorDisplay = document.getElementById("errorDisplay");
 ///////part 5 needs an if statement for the keep me logged in 
 
