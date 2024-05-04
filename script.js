@@ -27,5 +27,23 @@ validUsername = function () {
   }
 };
 //////part 4
+const login1 = document.getElementById("login");
+const password1 = document.getElementsByName("password");
 
+login1.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  alert(`you submitted this: ${login1.querySelector("input").value}`);
+});
+// Example above part 1-3/1- 5
+//*validating the username, email and password using localStorage
+/
+localStorage.setItem("login1", ",");
+// function ErrorDisplay() {
+const errorDisplay = document.getElementById("errorDisplay");
+add.addEventListener(e){
+    innerHtml.e.('error message')
+}
 // const errorDisplay = document.getElementById("errorDisplay");
+///////part 5 needs an if statement for the keep me logged in 
+
