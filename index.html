@@ -25,28 +25,37 @@
             name="username"
             type="text"
             placeholder="Username"
-            pattern="[A-Za-z0-9]{4,10}"/>
+            title="The username cannot be blank."
+            pattern="(?=.*[a-zA-Z])[a-zA-Z0-9_]{1}[_a-zA-Z0-9\\s]{6,14}"
+            required
+          />
           <span class="input-icon"><i class="fa-solid fa-user"></i></span>
 
           <br />
 
-          <input required name="email" type="text" placeholder="Email" />
+          <input required name="email" type="text" placeholder="Email"
+          title="The email must not be from the domain""example.com."
+          pattern="(?=.*@)(?!.*example).*" />
           <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
           ><br />
 
-          <input required name="password" type="text" placeholder="Password" />
+          <input required name="password" type="text" placeholder="Password"
+          title="Passwords cannot contain the word "password" " pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{12,}$" 
+          />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
           <input
             name="passwordCheck"
             type="text"
             placeholder="Repeat Password"
+            title="Both password must match"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{12,}$"
           />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span
           ><br /><br />
 
           <div class="flex-row">
-            <input name="terms" type="checkbox" />
+            <input name="terms" type="checkbox" required />
             <label for="terms"
               >I agree to the&nbsp;<a href="#">Terms of Use</a>.</label
             >
